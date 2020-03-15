@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class math {
@@ -39,11 +40,13 @@ public class math {
         numDouble = Math.random(); //рандомне число є [0, 1}
         System.out.println(numDouble); //16 цифр після коми
 
-        BigInteger bigInteger = BigInteger.valueOf(42); //для роботи з довгою плаваючою точкою
+        BigInteger bigInteger = BigInteger.valueOf(42); //для роботи з дуже великими цілими числами
         BigInteger bigInteger1 = BigInteger.valueOf(3);
 
         bigInteger = bigInteger.add(bigInteger1);
 
         bigInteger = bigInteger.multiply(bigInteger1);
+
+        BigDecimal bigDecimal = BigDecimal.valueOf(5555); //для роботи з дуже великими дробовими числами
     }
 }
