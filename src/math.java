@@ -41,12 +41,19 @@ public class math {
         System.out.println(numDouble); //16 цифр після коми
 
         BigInteger bigInteger = BigInteger.valueOf(42); //для роботи з дуже великими цілими числами
-        BigInteger bigInteger1 = BigInteger.valueOf(3);
+        BigInteger bigInteger1 = new BigInteger("3333333333333333333333333333333333333333333333333333333333333333");
 
-        bigInteger = bigInteger.add(bigInteger1);
+        BigInteger big3 = new BigInteger("3");
 
-        bigInteger = bigInteger.multiply(bigInteger1);
+        bigInteger = bigInteger.add(big3); //додавання
+
+        bigInteger = bigInteger.subtract(big3); //віднімання
+
+        bigInteger = bigInteger.multiply(big3); //множення
+
+        bigInteger = bigInteger.divide(big3); //ділення
 
         BigDecimal bigDecimal = BigDecimal.valueOf(5555); //для роботи з дуже великими дробовими числами
+        BigDecimal bigDecimal2 = new BigDecimal("422.444321343333366666666666666666666666666666666666666666666663");
     }
 }
