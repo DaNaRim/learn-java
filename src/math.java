@@ -3,7 +3,7 @@ import java.math.BigInteger;
 public class math {
     public static void main(String[] args) {
 
-        double numDouble = Math.pow(0, 0); // піднесення до квадрату
+        double numDouble = Math.pow(0, 0); // піднесення до степеня (число, степінь)
         System.out.println(numDouble);
 
         int numInt = (int) Math.pow(11, 2);
