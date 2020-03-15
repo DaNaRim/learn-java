@@ -1,5 +1,6 @@
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 
 public class math {
     public static void main(String[] args) {
@@ -41,19 +42,49 @@ public class math {
         System.out.println(numDouble); //16 цифр після коми
 
         BigInteger bigInteger = BigInteger.valueOf(42); //для роботи з дуже великими цілими числами
-        BigInteger bigInteger1 = new BigInteger("3333333333333333333333333333333333333333333333333333333333333333");
+        BigInteger bigInteger1 = new BigInteger("333333333333333333333333333333333333333333333333333333333333333");
+
+        BigDecimal bigDecimal = BigDecimal.valueOf(5555); //для роботи з дуже великими дробовими числами
+        BigDecimal bigDecimal2 = new BigDecimal("422.44432134333336666666666666666666666666666666666666666666663");
 
         BigInteger big3 = new BigInteger("3");
 
-        bigInteger = bigInteger.add(big3); //додавання
+        bigInteger = bigInteger.add(big3); //число не зміниться, треба створювати новий об'єкт
 
-        bigInteger = bigInteger.subtract(big3); //віднімання
+        BigInteger Integer1 = bigInteger.add(big3); //додавання
+        BigInteger Integer2 = bigInteger.subtract(big3); //віднімання
+        BigInteger Integer3 = bigInteger.multiply(big3); //множення
+        BigInteger Integer4 = bigInteger.divide(big3); //ділення
 
-        bigInteger = bigInteger.multiply(big3); //множення
+        long bigIntegerToLong = bigInteger.longValue(); // переведення в long
+        //ще є doubleValue(), intValue(), floatValue()
 
-        bigInteger = bigInteger.divide(big3); //ділення
+        //округлення
 
-        BigDecimal bigDecimal = BigDecimal.valueOf(5555); //для роботи з дуже великими дробовими числами
-        BigDecimal bigDecimal2 = new BigDecimal("422.444321343333366666666666666666666666666666666666666666666663");
+        //setScale(кількість знаків після коми, правило округлення);
+
+        BigDecimal bigDecimal0 = new BigDecimal("111.55599");
+
+        BigDecimal decimal1 = bigDecimal0.setScale(3, RoundingMode.CEILING); //округлення в більшу сторону
+        //111.5555555555 -> 111.556
+
+        BigDecimal decimal3 = bigDecimal0.setScale(3, RoundingMode.FLOOR); //округлення в меншу сторону
+        //111.55599 -> 111.555
+
+        BigDecimal decimal2 = bigDecimal0.setScale(3, RoundingMode.DOWN); //відкидання розряду
+        //111.55544 -> 111.555
+
+        BigDecimal decimal6 = bigDecimal0.setScale(3, RoundingMode.UP); //округлення в більшу сторону
+        //111.5551 -> 111.556
+
+        BigDecimal decimal4 = bigDecimal0.setScale(1, RoundingMode.HALF_UP);
+            //округлення в більшу сторону якщо число після коми >= 0.5
+        //0.55 -> 0.6
+        //0.54 -> 0.5
+
+        BigDecimal decimal5 = bigDecimal0.setScale(1, RoundingMode.HALF_DOWN);
+        //округлення в більшу сторону якщо число після коми > 0.5
+        //0.55 -> 0.5
+        //0.56 -> 0.6
     }
 }
