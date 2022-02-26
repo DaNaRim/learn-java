@@ -1,4 +1,4 @@
-package multithreading.lesson8;
+package multithreading.lesson08;
 
 class MyThread2 extends Thread {
     ResourceB resourceB;

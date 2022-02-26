@@ -1,4 +1,4 @@
-package multithreading.lesson4;
+package multithreading.lesson03;
 
 public class MyThread extends Thread {
 
@@ -10,7 +10,6 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        resource.changeStaticI();
-        new Resource().changeI();
+        resource.changeI();
     }
 }

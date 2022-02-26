@@ -1,4 +1,4 @@
-package multithreading.lesson5;
+package multithreading.lesson05;
 
 public class Main {
     volatile static int i; //no cash

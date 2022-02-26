@@ -1,4 +1,4 @@
-package multithreading.lesson2;
+package multithreading.lesson02;
 
 public class Main {
 
