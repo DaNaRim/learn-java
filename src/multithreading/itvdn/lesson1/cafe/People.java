@@ -1,4 +1,4 @@
-package multithreading.itvdn.cafe;
+package multithreading.itvdn.lesson1.cafe;
 
 public class People implements Runnable {
 

@@ -1,4 +1,4 @@
-package multithreading.itvdn.cafe;
+package multithreading.itvdn.lesson1.cafe;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;

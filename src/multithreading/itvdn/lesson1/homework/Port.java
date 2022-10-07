@@ -1,4 +1,4 @@
-package multithreading.itvdn.homework;
+package multithreading.itvdn.lesson1.homework;
 
 import java.util.concurrent.Semaphore;
 
