@@ -32,6 +32,7 @@ public class CustomExecutorServiceWrapper implements ExecutorService {
             throw new RuntimeException("Exception in task 3");
         });
         executor.invokeAll(queue);
+        executor.shutdown();
     }
 
     @Override
